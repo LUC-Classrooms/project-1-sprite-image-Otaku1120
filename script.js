@@ -135,7 +135,7 @@ rect (60, -35,20,20);
 //strip strokeWeight (2);
 stroke(0); // black line (60, -25, 80, - 25);
 
- pop(); // dispose of the UFO layer
+ pop(); // Seal
 }
 
 //do this one time when the mouse is clicked:
