@@ -25,35 +25,46 @@ function draw(){
   //Lower half water blue
   fill(0, 191, 255); 
   rect(0,200, width, height);// lower half rect.
+  noStroke();
+  ellipse(75, 230, 100, 100);
+  ellipse(175, 230, 100, 100);//waves
+  ellipse(275, 230, 100, 100);
+  ellipse(375, 230, 100, 100);
+  ellipse(475, 230, 100, 100);
+  ellipse(575, 230, 100, 100);
 
   fill("White"); // white text
   text("click the mouse to move seal <3", 410, 220);
   // add your image drawing code here
-  fill(255,255,0);
-  arc(1, 0, 200, 200, 0, HALF_PI);
+  fill(255,255,0);//lower half blue
+  arc(1, 0, 200, 200, 0, HALF_PI);//sun
 
   //stars
-fill(starcolor);
+fill(starcolor); //white norm
 triangle(160, 75, 170, 45, 180, 75); // 1 upper triangle
 triangle(160, 75, 170, 105, 180, 75); // 1 lower triangle
 triangle(300, 125, 310, 95, 320, 125); // 2 upper triangle
 triangle(300, 125, 310, 155, 320, 125); //2 lower triangle
 triangle(450, 75, 460, 45, 470, 75); // 3 upper triangle
 triangle(450, 75, 460, 105, 470, 75); // 3 lower triangle
-
+fill("white")
+ellipse(250, 120, 5, 5); // 1 mini star
+ellipse(100, 150, 5, 5); // 2 mini star
+ellipse(390, 150, 5, 5); // 3 mini star
+ellipse(550, 75, 5, 5); // 4 mini star
+ellipse(275, 45, 5, 5); // 5 mini star
+ellipse(335, 75, 5, 5); // 6 mini star
+ellipse(375, 45, 5, 5); // 7 mini star
+ellipse(490, 175, 5, 5); // 8 mini star
+ellipse(200, 150, 5, 5); // 9 mini star
+ellipse(120, 50, 5, 5); // 10 mini star
 if (mouseIsPressed) {
   // Check each frame to see if the mouse is pressed, then do something
-  starcolor = color("Yellow"); // Bright yellow
-  fill("white")
-  triangle(250, 75, 260, 70, 270, 75); // 1 upper triangle
-  triangle(250, 75, 260, 80, 270, 75); // 1 lower triangle
-  triangle(390, 125, 400, 120, 410, 125); // 2 upper triangle
-  triangle(390, 125, 400, 130, 410, 125); // 2 lower triangle
-triangle(530, 75, 540, 70, 550, 75); // 3 upper triangle
-triangle(530, 75, 540, 80, 550, 75); // 3 lower triangle
+  starcolor = color("yellow") // Bright yellow
 
   // Do something here if the mouse is NOT pressed
-  starcolor = color(191, 228, 87); // Normal yellow
+} else{ 
+  starcolor = color("white"); // White
 }
   // Update location each frame
  x += xSpeed;
