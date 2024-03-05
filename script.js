@@ -11,7 +11,7 @@ var angle = 0; // how far to rotate the image
 
 function setup(){
   // this function will run once
-  createCanvas(600, 400); // create a 600x400 pixel drawing canvas
+  createCanvas(589, 400); // create a 600x400 pixel drawing canvas
   x = width / 5; // set initial location
   y = height / 2;
   // set x and y speed and direction:
@@ -20,7 +20,7 @@ function setup(){
 }
 
 function draw(){
-  // this function runs again and again (60x per second)
+  // this function runs again
   background(9, 4, 106); //upper half Dark blue sky
   //Lower half water blue
   fill(0, 191, 255); 
@@ -77,13 +77,13 @@ if (mouseIsPressed) {
  // Ensure the spaceship stays within canvas boundaries
  if (y < height / 2) {
    y = height / 2;
-   ySpeed *= -1; // Reverse vertical direction if spaceship goes above the line
+   ySpeed *= -1; // Reverse vertical  if spaceship goes above the line
  } else if (y > height) {
-   ySpeed *= -1; // Reverse vertical direction if spaceship goes below the canvas
+   ySpeed *= -1; // Reverse vertical if spaceship goes below the picture
  }
 
  if (x > width - d / 2 || x < d / 2) {
-   xSpeed *= -1; // Reverse horizontal direction if spaceship goes beyond canvas boundaries
+   xSpeed *= -1; // Reverse horizontal if spaceship goes beyond the picture
  }
 
  // creating seal
@@ -101,18 +101,18 @@ ellipse(0 - d / 2, 0 - d / 3.5, d / 1.8, d / 1.7);
 noStroke()
 fill(0); // eyes
 ellipse(0 + d/-1.9, 0 - d/2.1, d/10, d/10); //top eye
-ellipse(0 - d/1.9, 0 - d/5.0, d/10, d/10);
+ellipse(0 - d/1.9, 0 - d/5.0, d/10, d/10); //bottom eye
 
 //mouth shape
 noStroke()
 fill(94, 113, 106)
-ellipse(0 + d/-2.5, 0 - d/3., d/5, d/5); //mouth
+ellipse(0 + d/-2.5, 0 - d/3., d/5, d/5);
 
 //nose
 fill("black")
 arc(0 - d / 2.2, 0 - d / 3, d / 15, d / 15, 3* PI / 2, PI / 2);
 
-//fin
+//fins
 fill(106,136,156);
 noStroke();
 ellipse(5, -10, 40, 50);// low fin 
@@ -141,7 +141,7 @@ stroke(0); // black line (60, -25, 80, - 25);
 //do this one time when the mouse is clicked:
 function mousePressed(){
  // choose a new trajectory
- xSpeed = random(-2, 2);
- ySpeed = random(-2, 2);
+ xSpeed = random(-2, 1);
+ ySpeed = random(-2, 1);
  rotationSpeed = random(-0.01, 0.01);
 }
