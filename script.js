@@ -100,20 +100,37 @@ fill(0); // eyes
 ellipse(0 + d/-1.9, 0 - d/2.1, d/10, d/10); //top eye
 ellipse(0 - d/1.9, 0 - d/5.0, d/10, d/10);
 
-//mouth
+//mouth shape
 noStroke()
 fill(94, 113, 106)
 ellipse(0 + d/-2.5, 0 - d/3., d/5, d/5); //mouth
 
-stroke(0); // nose/mouth
-arc(0 - d/50, 0 - d/5, 0 + d/50, 0 - d/5);
+//nose
+fill("black")
+arc(0 - d / 2.2, 0 - d / 3, d / 15, d / 15, 3* PI / 2, PI / 2);
+
+//fin
+fill(106,136,156);
+noStroke();
+ellipse(5, -10, 40, 50);// low fin 
+ellipse(5, -40, 40, 55)//top fin
 
 // body
 noStroke();
 fill(106,136,156);
 ellipse(19,-25, d*1, d*-.6);
-//fin
-triangle(25, -25, 25, -15, 35, -20);
+
+//body spot
+fill("white")
+noStroke();
+ellipse(25, -25, 60, 35);
+
+
+//tail
+fill(106,136,156)
+rect (60, -35,20,20);
+//strip strokeWeight (2);
+stroke(0); // black line (60, -25, 80, - 25);
 
  pop(); // dispose of the UFO layer
 }
@@ -123,5 +140,5 @@ function mousePressed(){
  // choose a new trajectory
  xSpeed = random(-2, 2);
  ySpeed = random(-2, 2);
- rotationSpeed = random(-0.1, 0.1);
+ rotationSpeed = random(-0.01, 0.01);
 }
