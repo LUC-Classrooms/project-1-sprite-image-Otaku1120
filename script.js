@@ -90,26 +90,31 @@ if (mouseIsPressed) {
  // all shapes are now located relative to (0,0)
  rotate(angle); // spin the object around the origin point
 
- //seal head
- fill("grey")
- ellipse(0, 0 - d/6, d/2, d/2);
- 
- //face
- fill(0, 255, 0); 
- ellipse(0, 0 - d/4, d/6, d/4);
- fill(0); // eyes
- ellipse(0 - d/20, 0 - d/3.5, d/18, d/10);
- ellipse(0 + d/20, 0 - d/3.5, d/18, d/10);
- stroke(0); // mouth (?)
- line(0 - d/50, 0 - d/5, 0 + d/50, 0 - d/5);
+//seal head
+fill(106,136,156)
+ellipse(0 - d / 2, 0 - d / 3.5, d / 1.8, d / 1.7);
 
- // body
- noStroke();
- fill(bodyColor);
- ellipse(0, 0, d, d/3);
- 
- 
- 
+//face
+noStroke()
+fill(0); // eyes
+ellipse(0 + d/-1.9, 0 - d/2.1, d/10, d/10); //top eye
+ellipse(0 - d/1.9, 0 - d/5.0, d/10, d/10);
+
+//mouth
+noStroke()
+fill(94, 113, 106)
+ellipse(0 + d/-2.5, 0 - d/3., d/5, d/5); //mouth
+
+stroke(0); // nose/mouth
+arc(0 - d/50, 0 - d/5, 0 + d/50, 0 - d/5);
+
+// body
+noStroke();
+fill(106,136,156);
+ellipse(19,-25, d*1, d*-.6);
+//fin
+triangle(25, -25, 25, -15, 35, -20);
+
  pop(); // dispose of the UFO layer
 }
 
