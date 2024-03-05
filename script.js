@@ -4,7 +4,7 @@ var x; //horizontal location
 var y = 300; // vertical location
 var d = 100; // diameter
 var ySpeed, xSpeed; // set speed in two dimensions
-var bodyColor = 200; // gray
+var bodyColor = (106,136,156); // gray
 var starcolor = "yellow"; // yellow
 var rotationSpeed = 0; // how fast to rotate the image
 var angle = 0; // how far to rotate the image
@@ -26,8 +26,9 @@ function draw(){
   fill(0, 191, 255); 
   rect(0,200, width, height);// lower half rect.
   noStroke();
+  //waves
   ellipse(75, 230, 100, 100);
-  ellipse(175, 230, 100, 100);//waves
+  ellipse(175, 230, 100, 100);
   ellipse(275, 230, 100, 100);
   ellipse(375, 230, 100, 100);
   ellipse(475, 230, 100, 100);
@@ -47,6 +48,7 @@ triangle(300, 125, 310, 95, 320, 125); // 2 upper triangle
 triangle(300, 125, 310, 155, 320, 125); //2 lower triangle
 triangle(450, 75, 460, 45, 470, 75); // 3 upper triangle
 triangle(450, 75, 460, 105, 470, 75); // 3 lower triangle
+//mini stars
 fill("white")
 ellipse(250, 120, 5, 5); // 1 mini star
 ellipse(100, 150, 5, 5); // 2 mini star
@@ -58,6 +60,7 @@ ellipse(375, 45, 5, 5); // 7 mini star
 ellipse(490, 175, 5, 5); // 8 mini star
 ellipse(200, 150, 5, 5); // 9 mini star
 ellipse(120, 50, 5, 5); // 10 mini star
+
 if (mouseIsPressed) {
   // Check each frame to see if the mouse is pressed, then do something
   starcolor = color("yellow") // Bright yellow
